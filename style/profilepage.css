@@ -1,0 +1,58 @@
+/* Style for the modal */
+#profileModal
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  
+  
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px; /* Adjust width as needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 999; /* Ensure it's above other content */
+  overflow: auto; /* Enable scrolling if content exceeds modal height */
+}
+
+/* Style for the modal content */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for the modal */
+  margin-top: 50px; /* Adjust top margin as needed */
+}
+
+/* Style for the close button */
+#closeModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.profile_photo {
+  display: flex;
+  align-items: center;
+}
+
+.profile_photo img {
+  width: 72px;
+  height: 55px;
+}
+
+.profile_photo h2 {
+  margin: 0;
+}
+
+.Recent_purchesebox{
+  background-color: aqua;
+}
