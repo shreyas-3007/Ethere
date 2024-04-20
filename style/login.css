@@ -1,0 +1,14 @@
+.main_section_login
+{
+  display: flex;
+  justify-content: center;
+}
+
+.login_container
+{
+  height: 200px;
+  align-items: center;
+  
+  
+  
+}

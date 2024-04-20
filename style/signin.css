@@ -1,0 +1,24 @@
+.main_section_login
+{
+  display: flex;
+  justify-content: center;
+}
+
+.login_container
+{
+  height: 200px;
+  align-items: center;
+  
+  
+  
+}
+
+.validation-message {
+  display: none;
+  color: red;
+  margin-top: 5px;
+}
+
+.satisfied {
+  color: green;
+}
