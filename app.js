@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const { required } = require('joi');
 
 const app = express();
 
@@ -21,7 +22,8 @@ const userSchema = new mongoose.Schema({
   name: String,
   emailOrPhone: String,
   dob: Date,
-  gender: String
+  gender: String,
+  password:String
 });
 const User = mongoose.model('Users', userSchema);
 
