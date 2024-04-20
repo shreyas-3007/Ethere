@@ -22,3 +22,47 @@
 .satisfied {
   color: green;
 }
+
+
+.login_container {
+  background-color: #fff;
+  padding: 40px;
+  width: 45%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.login_container h2 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.login_container .input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.login_container .input-box input {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.login_container  .input-box input[type="submit"] {
+  width: 100%;
+  background: rgb(127, 95, 141);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  transition: 0.5s;
+}
