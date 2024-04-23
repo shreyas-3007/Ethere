@@ -8,6 +8,9 @@ function onLoad() {
   displayCount();
 }
 
+
+
+
 function displayItemsHome() {
   let containerElement = document.querySelector(".item_container");
 

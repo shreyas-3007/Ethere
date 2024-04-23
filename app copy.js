@@ -1,16 +1,75 @@
+// const express = require('express');
+// const path = require('path');
+// const mongoose = require('mongoose');
+// const bodyParser = require('body-parser');
+// const { required } = require('joi');
+
+// const app = express();
+
+
+
+
+// app.use(express.static(path.join(__dirname, '')));
+
+// app.get('/', (req, res) => {
+//   res.sendFile(path.join(__dirname, '', 'index.html'));
+// });
+
+
+// mongoose.connect('mongodb://localhost:27017/ethere', { useNewUrlParser: true, useUnifiedTopology: true });
+// const db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+// // Define schema and model for user data
+// const userSchema = new mongoose.Schema({
+//   name: String,
+//   emailOrPhone: String,
+//   dob: Date,
+//   gender: String,
+//   password:String
+// });
+// const User = mongoose.model('Users', userSchema);
+
+// // Middleware
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
+
+// app.get('/login',(req,res)=>
+// {
+//     res.sendFile(path.join(__dirname,'pages','login.html'))
+// });
+
+// // Route to serve signup page
+// app.get('/signup', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'pages', 'signUp.html'));
+// });
+
+// // Route to handle signup form submission
+// app.post('/signup', async (req, res) => {
+//   try {
+//     const userData = req.body;
+//     const user = new User(userData);
+//     await user.save();
+//     // res.send('User signed up successfully!');
+//     res.redirect('/')
+//   } catch (error) {
+//     res.status(500).send(error.message);
+//   }
+// });
+
+
+// app.listen(2000 , () => {
+//   console.log('Server is running on port 2000');
+// });
+
+
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const bcrypt = require('bcrypt');
-
-
 
 const app = express();
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
 // Middleware for session management
 app.use(session({
@@ -18,7 +77,6 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
-
 
 // Serve static files
 app.use(express.static(path.join(__dirname, '')));
@@ -42,8 +100,6 @@ const userSchema = new mongoose.Schema({
 });
 const User = mongoose.model('User', userSchema);
 
-
-
 // Middleware for authentication
 function isAuthenticated(req, res, next) {
   if (req.session && req.session.userId) {
@@ -61,14 +117,8 @@ app.get('/signup', (req, res) => {
 // Route to handle signup form submission
 app.post('/signup', async (req, res) => {
   try {
-    // const { name, emailOrPhone, dob, gender, password } = req.body; // Destructuring req.body
-    const user = new User({
-      name: req.body.name,
-      emailOrPhone: req.body.emailOrPhone,
-      dob: req.body.dob,
-      gender: req.body.gender,
-      password: bcrypt.hashSync(req.body.password,10)
-    });
+    const userData = req.body;
+    const user = new User(userData);
     await user.save();
     res.redirect('/');
   } catch (error) {
@@ -96,8 +146,6 @@ app.post('/login', async (req, res) => {
     res.status(500).send(error.message);
   }
 });
-
-
 
 // Route to handle logout
 app.post('/logout', isAuthenticated, (req, res) => {

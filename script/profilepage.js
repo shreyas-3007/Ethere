@@ -3,13 +3,20 @@ document.addEventListener('DOMContentLoaded', function() {
   const profileModal = document.getElementById('profileModal');
   const closeModalBtn = document.getElementById('closeModal');
   const clickevent= document.getElementById('.profile-icon');
+document.addEventListener("DOMContentLoaded", function () {
+  const profileIcon = document.querySelector(".action_container");
+  const profileModal = document.getElementById("profileModel");
+  const closeModalBtn = document.getElementById("closeModel");
+  const clickevent = document.getElementById(".profile-icon");
 
-  profileIcon.addEventListener('click', function() {
-      profileModal.style.display = 'block';
+ 
+
+  profileIcon.addEventListener("click", function () {
+    profileModal.style.display = "block";
   });
 
-  closeModalBtn.addEventListener('click', function() {
-      profileModal.style.display = 'none';
+  closeModalBtn.addEventListener("click", function () {
+    profileModal.style.display = "none";
   });
 });
 
@@ -20,4 +27,20 @@ document.addEventListener('DOMContentLoaded', function() {
 //     sidebar.classList.toggle('active');
 // });
 
+// function displayprofile() {
+//   let profileElement = document.querySelector(".model");
 
+//   let innerHTML = "";
+
+//   innerHTML += `<div class="first_div">
+//   <div class="customer_info">
+//     <div class="profile_photo">
+//       <img src="images/ethere_logo.jpg" alt="" />
+//     </div>
+//     <h2 class="customer_name"> Hey Shreyas Patil</h2>
+//   </div>
+
+//   <div id="closeModel">
+//     <span class="material-symbols-outlined"> close </span>
+//   </div>`;
+// }
