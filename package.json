@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon"
+    "start": "nodemon"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +18,4 @@
     "joi": "^17.12.3",
     "mongoose": "^8.3.2"
   }
-  
 }

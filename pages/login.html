@@ -55,24 +55,33 @@
     </header>
 
     <main>
+
       <section class="main_section_login">
         <div class="login_container">
           
           <h2>Login</h2>
-
-          <form id="loginForm" onsubmit="return validateForm()">
-            <label for="username">Phone Number/Email:</label>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Enter your phone number or email"
-              required />
-              <button type="submit">Login  </button>
-            
-          </form>
-
-          
+          <div class="inner_page">
+            <form id="loginForm" onsubmit="return validateForm()">
+              
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Email"
+                required />
+                
+                <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Password"
+                required />
+                <button type="submit">Login  </button>
+            </form>
+            <div class="signin_redirect">
+              <h4>Create an Account <a href="/signUp">SignUp</a></h4>
+            </div>
+          </div>
         </div>
       </section>
     </main>

@@ -1,8 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const profileIcon = document.querySelector('.action_container');
-  const profileModal = document.getElementById('profileModal');
-  const closeModalBtn = document.getElementById('closeModal');
-  const clickevent= document.getElementById('.profile-icon');
+
 document.addEventListener("DOMContentLoaded", function () {
   const profileIcon = document.querySelector(".action_container");
   const profileModal = document.getElementById("profileModel");
