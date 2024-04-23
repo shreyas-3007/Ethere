@@ -30,6 +30,8 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for the modal */
   margin-top: 50px; /* Adjust top margin as needed */
+  height: 650px;
+  width: 250px;
 }
 
 /* Style for the close button */
@@ -42,17 +44,26 @@
 .profile_photo {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .profile_photo img {
   width: 72px;
   height: 55px;
+ 
 }
 
 .profile_photo h2 {
   margin: 0;
+  
 }
 
 .Recent_purchesebox{
-  background-color: aqua;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for the modal */
+  height: 100px;
+  width: 100px;
+  margin-bottom: 10px;
 }
